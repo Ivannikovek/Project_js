@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Телефонная книга</title>
+</head>
+<body>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Поиск по контактам">
+        </div>
+        <div id="contactsContainer" class="contacts-container"></div>
+        <div class="add-contact-container">
+            <img src="plus.png" alt="Добавить контакт" class="add-contact-btn" onclick="openModal()">
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Добавить контакт</h2>
+            <form id="addContactForm">
+                <div class="form-row">
+                    <label for="nameInput">Имя</label>
+                    <input type="text" id="nameInput" required>
+                </div>
+                <div class="form-row">
+                    <label for="phoneInput">Телефон</label>
+                    <input type="text" id="phoneInput" required>
+                </div>
+                <div class="form-row">
+                    <label for="favoriteInput">Избранное</label>
+                    <input type="checkbox" id="favoriteInput">
+                </div>
+                <div class="form-row">
+                    <label for="avatarInput">Аватар</label>
+                    <input type="file" id="avatarInput" accept="image/*">
+                </div>
+                <button type="submit">Создать новый контакт</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="contactbook.js"></script>
+</body>
+</html>
